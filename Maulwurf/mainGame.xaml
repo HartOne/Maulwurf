@@ -7,7 +7,41 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.492,0.519">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="gameField" Grid.Row="1" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/> 
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Source="Assets/Field.png" />
+            <Image Grid.Row="1" Grid.Column="0" Source="Assets/Field.png" />
+            <Image Grid.Row="2" Grid.Column="0" Source="Assets/Field.png" />
+            <Image Grid.Row="0" Grid.Column="1" Source="Assets/Field.png" />
+            <Image Grid.Row="1" Grid.Column="1" Source="Assets/Field.png" />
+            <Image Grid.Row="2" Grid.Column="1" Source="Assets/Field.png" />
+            <Image Grid.Row="0" Grid.Column="2" Source="Assets/Field.png" />
+            <Image Grid.Row="1" Grid.Column="2" Source="Assets/Field.png" />
+            <Image Grid.Row="2" Grid.Column="2" Source="Assets/Field.png" />
+        </Grid>
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"  VerticalAlignment="Top" Orientation="Vertical" Margin="0,0,20,0">
+            <TextBlock x:Name="ScoreLabel" Text="Score:" HorizontalAlignment="Right" FontSize="30"/>
+            <TextBlock x:Name="ScoreText" Text="99999" HorizontalAlignment="Right"  FontSize="30"/>
+        </StackPanel>
     </Grid>
 </Page>
