@@ -10,6 +10,8 @@ namespace Maulwurf
     {
         public int Score { get; set; }
         private int score;
+        public int Lives { get; set; }
+
     }
 }
   

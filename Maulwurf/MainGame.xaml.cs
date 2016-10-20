@@ -48,7 +48,7 @@ namespace Maulwurf
             {
                 mole[i] = new Moles () ;
             }
-            player = new Player { Score = 0 };
+            player = new Player { Score = 0, Lives = 3};
             ScoreText.Text = player.Score.ToString();
             gameTimer = new DispatcherTimer();
             gameTimer.Interval = new TimeSpan(0, 0, 1);
@@ -58,10 +58,25 @@ namespace Maulwurf
 
         private void GameTimer_Tick(object sender, object e)
         {
-            CheckallMoles();
+            CheckAllMoles();
         }
 
-        private void CheckallMoles()
+        private void MinusPoint()
+        {
+            player.Lives -= 1;
+            if (player.Lives <= 0)
+            {
+                {
+                    GameOver();
+                }
+            }
+        }
+                private void GameOver()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CheckAllMoles()
         {
             for (int i = 0; i < mole.Length; i++) 
             {

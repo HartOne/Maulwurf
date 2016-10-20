@@ -19,7 +19,7 @@ namespace Maulwurf
         {
 
 
-            Timer = rnd.Next(1,4);
+            Timer = rnd.Next(1, 4);
             int row = position / 3;
             int column = position % 3;
             Img = new Image();
